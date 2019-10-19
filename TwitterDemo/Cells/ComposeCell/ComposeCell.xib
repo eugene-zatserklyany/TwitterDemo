@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="276" id="KGk-i7-Jjw" customClass="ComposeCell" customModule="TwitterDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="276"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="276"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="What's happening?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GRj-BQ-48c">
+                        <rect key="frame" x="74" y="8" width="290" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="k23-kB-DR7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bk3-ra-leR">
+                        <rect key="frame" x="16" y="8" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="5cU-Al-7mQ"/>
+                            <constraint firstAttribute="height" constant="50" id="yaK-5W-rxG"/>
+                        </constraints>
+                    </imageView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="MGA-gq-2IR">
+                        <rect key="frame" x="74" y="66" width="290" height="150"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="CsD-ms-4Rt"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mM0-rh-Avt">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GRj-BQ-48c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="74" id="0fm-7W-b1G"/>
+                    <constraint firstItem="MGA-gq-2IR" firstAttribute="leading" secondItem="GRj-BQ-48c" secondAttribute="leading" id="Hct-0X-uIX"/>
+                    <constraint firstItem="MGA-gq-2IR" firstAttribute="top" secondItem="GRj-BQ-48c" secondAttribute="bottom" constant="8" id="Maj-Mq-kgc"/>
+                    <constraint firstItem="GRj-BQ-48c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="VBj-60-zUk"/>
+                    <constraint firstItem="bk3-ra-leR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="hOO-Rj-cYH"/>
+                    <constraint firstItem="bk3-ra-leR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="uvP-Te-CII"/>
+                    <constraint firstAttribute="trailing" secondItem="GRj-BQ-48c" secondAttribute="trailing" constant="16" id="vRA-me-so1"/>
+                    <constraint firstItem="MGA-gq-2IR" firstAttribute="trailing" secondItem="GRj-BQ-48c" secondAttribute="trailing" id="zgq-Dr-Xzh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <gestureRecognizers/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="MGA-gq-2IR" id="xtQ-7U-7Cb"/>
+                <outlet property="profileImageView" destination="bk3-ra-leR" id="Zb6-5z-rcm"/>
+                <outlet property="tweetTextView" destination="GRj-BQ-48c" id="dXt-CD-yeC"/>
+            </connections>
+            <point key="canvasLocation" x="114.49275362318842" y="166.07142857142856"/>
+        </tableViewCell>
+    </objects>
+</document>

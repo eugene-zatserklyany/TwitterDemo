@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsPopoverView" customModule="TwitterDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="X55-1W-FNi" id="y50-Mn-5J2"/>
+                <outlet property="deleteTweetButton" destination="ciQ-Ib-dK4" id="277-ol-TRT"/>
+                <outlet property="detailsView" destination="5D7-yl-z1a" id="Mfo-KG-bOw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="siD-Lk-qeq">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5D7-yl-z1a">
+                    <rect key="frame" x="0.0" y="267" width="414" height="629"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X55-1W-FNi">
+                            <rect key="frame" x="16" y="120" width="382" height="50"/>
+                            <color key="backgroundColor" name="DynamicLightGray"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="WfW-0r-eIp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="28e-OE-UWc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciQ-Ib-dK4">
+                            <rect key="frame" x="16" y="35" width="382" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="0up-4X-yQX"/>
+                            </constraints>
+                            <state key="normal" title="Delete Tweet">
+                                <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="deleteTweetAction:" destination="-1" eventType="touchUpInside" id="wtx-VG-wtO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="DynamicBackground"/>
+                    <constraints>
+                        <constraint firstItem="X55-1W-FNi" firstAttribute="leading" secondItem="5D7-yl-z1a" secondAttribute="leading" constant="16" id="073-OL-pnW"/>
+                        <constraint firstItem="X55-1W-FNi" firstAttribute="top" secondItem="ciQ-Ib-dK4" secondAttribute="bottom" constant="35" id="Cdd-XS-cCS"/>
+                        <constraint firstItem="ciQ-Ib-dK4" firstAttribute="leading" secondItem="5D7-yl-z1a" secondAttribute="leading" constant="16" id="OL4-b4-oWX"/>
+                        <constraint firstAttribute="bottom" secondItem="X55-1W-FNi" secondAttribute="bottom" priority="999" constant="8" id="m06-Fs-he0"/>
+                        <constraint firstAttribute="trailing" secondItem="ciQ-Ib-dK4" secondAttribute="trailing" constant="16" id="neU-O9-zWa"/>
+                        <constraint firstItem="ciQ-Ib-dK4" firstAttribute="top" secondItem="5D7-yl-z1a" secondAttribute="top" constant="35" id="nyB-Ub-0xX"/>
+                        <constraint firstAttribute="trailing" secondItem="X55-1W-FNi" secondAttribute="trailing" constant="16" id="xY3-cK-muI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5D7-yl-z1a" secondAttribute="trailing" id="9aP-LK-YAQ"/>
+                <constraint firstAttribute="bottom" secondItem="5D7-yl-z1a" secondAttribute="bottom" id="d0U-PL-WL4"/>
+                <constraint firstItem="5D7-yl-z1a" firstAttribute="leading" secondItem="siD-Lk-qeq" secondAttribute="leading" id="lQs-Lm-bmB"/>
+                <constraint firstItem="5D7-yl-z1a" firstAttribute="top" relation="lessThanOrEqual" secondItem="siD-Lk-qeq" secondAttribute="top" constant="267" id="ya6-Wf-yS6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="3lU-mj-JNx"/>
+            <point key="canvasLocation" x="139" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="DynamicBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DynamicLightGray">
+            <color red="0.90588235294117647" green="0.92549019607843142" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
